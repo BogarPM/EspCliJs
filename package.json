@@ -1,0 +1,25 @@
+{
+  "name": "espclijs",
+  "version": "1.0.0",
+  "description": "Backend for EspCli Library",
+  "main": "index.js",
+  "scripts": {
+    "test": "dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DRK970/EspCliJs.git"
+  },
+  "keywords": [
+    "ESP8266",
+    "NodeJs",
+    "Backend",
+    "IOT"
+  ],
+  "author": "DRK970",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DRK970/EspCliJs/issues"
+  },
+  "homepage": "https://github.com/DRK970/EspCliJs#readme"
+}
