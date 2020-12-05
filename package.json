@@ -4,7 +4,7 @@
   "description": "Backend for EspCli Library",
   "main": "index.js",
   "scripts": {
-    "test": "dev"
+    "test": "nodemon ./index.js"
   },
   "repository": {
     "type": "git",
