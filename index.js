@@ -7,7 +7,7 @@ let port = 3000;
 
 app.get('/',(req,res) => {
     console.log('Get request');
-    res.send('Hello World');
+    res.sendFile(__dirname + '/public/panel.html');
 });
 
 app.listen(port,()=>{
