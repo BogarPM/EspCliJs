@@ -12,35 +12,49 @@
     </header>
     <main>
         <section class="data-section" id="numeric-data">
+            <h3>Enviar datos numéricos</h3>
+            <hr>
             <form action="">
-                <input type="text" id="data1">
-                <input type="text" id="data2">
-                <input type="text" id="data3">
-                <button id="send-button" type="submit">Enviar datos</button>
+                <div class="btn-container">
+                    <input type="text" id="data1" placeholder="Dato1">
+                    <input type="text" id="data2" placeholder="Dato2">
+                    <input type="text" id="data3" placeholder="Dato3">
+                </div>
+                <div><button id="send-button" type="submit">Enviar datos</button></div>
             </form>
-        </section class="data-section" id="analog-data">
-        <section>
-            <form action="">
+        </section>
+        <section  class="data-section" id="analog-data">
+            <h3>Recibir datos analógicos</h3>
+            <hr>
+            <div class="btn-container">
                 <span id="an1">AN0 Datos</span>
                 <span id="an2">AN0 Datos</span>
                 <span id="an3">AN0 Datos</span>
-            </form>
+            </div>
         </section>
         <section class="data-section" id="button-data">
-            <form action="">
-                <div id="btn1"></div>
-                <div id="btn2"></div>
-                <div id="btn3"></div>
-            </form>
+            <h3>Recibir estados de los botones</h3>
+            <hr>
+            <div class="btn-container">
+                <div class="btn" id="btn1">btn1</div>
+                <div class="btn" id="btn2">btn2</div>
+                <div class="btn" id="btn3">btn3</div>
+            </div>
+            
         </section>
         <section class="data-section" id="led-data">
-            <form action="">
+            <h3>Enviar estado de los Leds</h3>
+            <hr>
+            <div class="btn-container">
                 <button id="led1">Led_1</button>
                 <button id="led2">Led_1</button>
                 <button id="led3">Led_1</button>
-            </form>
+            </div>
+            
         </section>
         <section class="data-section" id="string-data">
+            <h3>Enviar Texto</h3>
+            <hr>
             <form action="">
                 <input id="chat-box" type="text" placeholder="Escribe un mensaje">
                 <button type="submit">Enviar</button>
