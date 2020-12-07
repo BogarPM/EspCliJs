@@ -1,9 +1,13 @@
 const express = require("express");
+const db = require('./src/statusManager')
 var analog_route = require('./routes/analog_route');
+var data_route = require('./routes/data_route.js');
 const app = express();
+
 
 app.use(express.static('public'));
 app.use('/analog', analog_route);
+app.use('/data', data_route)
 
 let port = 3000;
 
