@@ -95,6 +95,7 @@ body{
     /*float: left;*/
     font-size: 20px;
     width: 80%;
+    margin-left: 10px;
 }
 #string-data button{
     font-size: 20px;

@@ -1,13 +1,18 @@
-const express = require("express");
-const db = require('./src/statusManager')
+const express = require('express');
+const app = express();
+const server = require('http').Server(app);
+const io = require('socket.io')(server);
+var db = require('./src/statusManager');
+
 var analog_route = require('./routes/analog_route');
 var data_route = require('./routes/data_route.js');
-const app = express();
+
+
 
 
 app.use(express.static('public'));
 app.use('/analog', analog_route);
-app.use('/data', data_route)
+app.use('/data', data_route);
 
 let port = 3000;
 
@@ -16,7 +21,12 @@ app.get('/',(req,res) => {
     res.sendFile(__dirname + '/public/panel.html');
 });
 
-app.listen(port,()=>{
+io.on('connection', function(socket){
+    console.log('Cliente conectado');
+    //soc.emit('text',message);
+});
+
+server.listen(port,()=>{
     console.log('Server listenning on port ', port);
 });
 

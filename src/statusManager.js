@@ -1,11 +1,12 @@
 //This script manages the data base
 const mysql = require('mysql');
-let con = mysql.createConnection({
+var con = mysql.createConnection({
     host: "localhost",
     user: "admon",
-    password: "aksjaksj"
+    password: "aksjaksj",
+    insecureAuth : true
 });
-console.log(con);
+//console.log(con);
 
 con.connect(function(err){
     if(err){
