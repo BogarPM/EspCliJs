@@ -35,6 +35,16 @@ con.registerDevice = function(devName, address, config){
     });
 };
 
+con.registerDev = function(data){
+    let devName = data.name;
+    con.query("insert into devices(nombre) values('" + devName + "')", function(e,r,f){
+        if(e){throw e;}
+        console.log(r);
+    });
+    let config = devName.pinConfig;
+    
+}
+
 con.registerPin = function(devId, pin, type, name){
     this.query("insert into pins values(" + pin + "," + devid + "," + type + ",'" + name + "')", function(e,r,f){
         if(e){throw e;}
@@ -66,5 +76,7 @@ con.getPinConfig = function(id){
         });
     });
 }
+
+
 
 module.exports = con;

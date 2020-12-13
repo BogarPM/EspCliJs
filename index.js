@@ -35,6 +35,7 @@ console.log(JSON.stringify(tobj));
 //db.statusChange(1,13,0);
 
 app.use(express.static('public'));
+app.use(express.json());
 app.use('/analog', analog_route);
 app.use('/data', data_route);
 app.use('/leds', leds_route);
@@ -44,7 +45,13 @@ let port = 3000;
 
 app.get('/',(req,res) => {
     console.log('Get request');
-    res.sendFile(__dirname + '/public/panel.html');
+    res.sendFile(__dirname + '/public/register.html');
+});
+
+app.post('/devices',(req,res)=>{
+    console.log(req.body);
+    db.registerDev(req.body);
+    res.json("thanks");
 });
 
 /*io.on('connection', function(socket){

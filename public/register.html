@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registrar dispositivo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <header>
+        <h3>Registrar dispositivo</h3>
+        <form id="register-form">
+            <span>Nombre del dispositivo:</span>
+            <input id="name-field" type="text">
+            <button type="submit">Registrar</button>
+        </form>
+        <h2>Configuración de los pines</h2>
+        <button id="add">+</button>
+        <button id="subtract">-</button>
+        <button id="clr">Limpiar</button>
+    </header>
+    <main>
+        <table>
+            <thead>
+                <tr>
+                    <th>No. Pin</th>
+                    <th>Nombre</th>
+                    <th>Tipo</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th><input class="pin-field" type="text"></th>
+                    <th><input class="pin-name-field" type="text"></th>
+                    <th><label for="type"></label><select name="type" id="type" class="type">
+                        <option value="DIGITAL_INPUT">DIGITAL_INPUT</option>
+                        <option value="DIGITAL_OUTPUT">DIGITAL_OUTPUT</option>
+                        <option value="PWM">PWM</option>
+                        <option value="ANALOG">ANALOG</option>
+                    </select></th>
+                </tr>
+            </tbody>
+        </table>
+
+        <!--<section class="pin-section">
+            <form class="pin-config-form">
+                <span>No. Pin: </span><input class="pin-field" type="text">
+                <label for="type">Selecciona tipo</label>
+                <select name="type" id="type">
+                    <option value="DIGITAL_INPUT">DIGITAL_INPUT</option>
+                    <option value="DIGITAL_OUTPUT">DIGITAL_OUTPUT</option>
+                    <option value="PWM">PWM</option>
+                    <option value="ANALOG">ANALOG</option>
+                </select>
+            </form>
+        </section>-->
+    </main>
+    <footer></footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>    <!--Jquery script-->
+    <script src="./js/register.js"></script>
+</body>
+</html>
