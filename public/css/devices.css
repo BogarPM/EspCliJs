@@ -1,0 +1,12 @@
+header label{
+    font-size: 2.4rem;
+    
+}
+header #device-selector{
+    background-color: #13AD4E;
+    padding: 10px 0;
+}
+header select{
+    font-size: 2.4rem;
+    margin-left: 15px;
+}

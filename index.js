@@ -8,6 +8,7 @@ var soc = require('./src/Tcpsoc');
 
 var analog_route = require('./routes/analog_route');
 var data_route = require('./routes/data_route.js');
+var devices_route = require('./routes/devices_route.js');
 var leds_route = require('./routes/leds_route.js');
 var buttons_route = require('./routes/buttons_route.js');
 
@@ -40,19 +41,15 @@ app.use('/analog', analog_route);
 app.use('/data', data_route);
 app.use('/leds', leds_route);
 app.use('/buttons', buttons_route);
+app.use('/devices', devices_route);
 
 let port = 3000;
 
 app.get('/',(req,res) => {
     console.log('Get request');
-    res.sendFile(__dirname + '/public/register.html');
+    res.sendFile(__dirname + '/public/main.html');
 });
 
-app.post('/devices',(req,res)=>{
-    console.log(req.body);
-    db.registerDev(req.body);
-    res.json("thanks");
-});
 
 /*io.on('connection', function(socket){
     //console.log('Cliente conectado');

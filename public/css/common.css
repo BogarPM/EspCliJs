@@ -1,0 +1,39 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+header{
+    background-color: #BBFFD5;
+    overflow: auto;
+}
+header h1{
+    font-size: 3.2rem;
+    text-align: center;
+    margin-top: 1.0rem;
+}
+
+.generic-nav{
+
+    margin-top: 3.0rem;
+}
+.generic-nav li{    /*Elements of the list*/
+    display: inline-block;
+
+}
+
+.generic-nav a{
+    font-size: 2.4rem;
+    text-decoration: none;
+    margin: 5px 0px;
+    padding: 5px 20px;
+
+}
+.generic-nav a:hover{
+    background-color: gray;
+    color: honeydew;
+}
+.generic-nav a:active{
+    color: lightgray;
+}
